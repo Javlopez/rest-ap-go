@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    container_name: "app"
+    build: "./app"
+    volumes:
+      - "/home/javier/go/rest-api/app:${GO_PROJECT_DIR}/app"
+    ports:
+      - "8081:8080"
+    environment:
+      GO_WORK_DIR: "${GO_PROJECT_DIR}/app"
