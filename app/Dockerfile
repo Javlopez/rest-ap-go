@@ -19,7 +19,7 @@ RUN mkdir -p "${GOPATH}/src" "${GOPATH}/bin" \
     && chmod -R 777 "${GOPATH}" \
     && chmod +x /entrypoint.sh
 
-RUN go get github.com/tockins/realize
+RUN go get github.com/tockins/realize github.com/gorilla/mux
 
 WORKDIR ${GOPATH}
 ENTRYPOINT [ "/entrypoint.sh" ]
